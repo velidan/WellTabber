@@ -1,0 +1,152 @@
+.tabsDemoBox{
+    margin: 0 auto 20px;
+    font: 14px/18px Verdana, Tahoma, serif;
+    min-height: 375px;
+}
+
+.infoNav {
+    display: table;
+    width:100%;
+}
+
+.infoNav span {
+    display:table-cell;
+    vertical-align: middle;
+    text-align: center;
+    cursor:pointer;
+    border-bottom: 0;
+    height: 50px;
+
+    padding: 2px 0;
+    background: #28A75C;
+    color: #fff;
+    line-height: 1;
+    margin-bottom: 0;
+    transition: all 0.50s ease-in-out;
+    box-shadow: inset 0 0 6px rgba(0,0,0,.6), 0 0 10px rgba(0,0,0,.1);
+
+}
+
+.tabsDemoBox.noNavArr .infoNav span:first-child {
+    border-radius: 7px 0 0 0;
+}
+
+.tabsDemoBox.noNavArr .infoNav span:last-child {
+    border-radius: 0 7px 0 0;
+}
+
+.infoNav span:hover {
+    background: rgba(0, 29, 1, 0.84);
+    color: #fff;
+}
+
+.infoNav .active{
+    background: rgba(0, 56, 3, 0.81);
+    color: #fff;
+}
+
+.infoNav span.infoNavL,
+.infoNav span.infoNavR{
+    width: 40px;
+    vertical-align: top;
+}
+
+.infoNav span.infoNavL {
+    border-top-left-radius: 7px;
+}
+
+.infoNav span.infoNavR {
+    border-top-right-radius: 7px;
+}
+
+.infoNavL:before,
+.infoNavR:before{
+    content:'';
+    width:15px ;
+    height:17px ;
+    background: url(/img/productMainInfo_nav.png);
+    display: block;
+    margin: 16px auto;
+}
+.infoNavR:before {
+    background-position: -15px;
+}
+.tabsBox{
+    position:relative;
+    border-top-width: 0;
+    border-radius: 0 0 5px 5px;
+}
+.detailTab {
+    height: 320px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: all 1s ease-in-out;
+    color: rgb(255, 255, 255);
+    background: rgba(6, 13, 19, .701961);
+
+    padding: 30px;
+    overflow: hidden;
+    box-shadow: inset 0 0 20px rgba(0,0,0,.3), 0 0 20px rgba(0,0,0,.2);
+    border-radius: 0 0 5px 5px;
+}
+
+.detailTab:nth-child(1) {
+    background: radial-gradient(circle, blue, #944A4A, #1EABB9);
+}
+
+.detailTab:nth-child(2) {
+    background: radial-gradient(circle, red, yellow, green);
+}
+
+.detailTab:nth-child(3) {
+    background: radial-gradient(circle, #A452CE, #750000, #CCD813);
+}
+
+
+.detailTab.active{
+    opacity:1;
+}
+.detailTab li {
+    min-width:320px;
+}
+.detailTab p {
+    display:inline-block;
+}
+
+.detailTab li p:first-of-type{
+    font-family: Verdana, Tahoma, serif;
+}
+
+
+.tabsDemoBox.vertical {
+    display: flex;
+    min-height: 320px;
+}
+
+.tabsDemoBox.vertical .infoNav {
+    flex-direction: column;
+    display: flex;
+    flex-basis: 20%;
+    height: 50%;
+}
+
+.tabsDemoBox.vertical .tabsBox {
+    display: flex;
+    flex-grow: 1;
+    box-shadow: -4px 0 10px 2px rgba(0,0,0,.5);
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.tabsDemoBox.vertical .infoNav span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10%;
+    border-radius: 30px 0 0 30px;
+}
