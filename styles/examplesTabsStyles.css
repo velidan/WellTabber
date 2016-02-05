@@ -132,7 +132,6 @@
     flex-direction: column;
     display: flex;
     flex-basis: 20%;
-    height: 50%;
 }
 
 .tabsDemoBox.vertical .tabsBox {
